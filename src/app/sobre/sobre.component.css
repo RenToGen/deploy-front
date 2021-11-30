@@ -1,37 +1,13 @@
 body {
     background: #F2A410;
-}
-a { color: inherit; } 
-.segunda-parte {
-    background-color: #E06309;
+    margin-top: -50px;
+    overflow: hidden;
 }
 
-.terceira-parte {
-    background-color: #000000;
-}
-
-.quarta-parte {
-    background: #F2A410;    
-}
-
-.ml-200 {
-    margin-left: 100px;
-}
-
-.mr-200 {
-    margin-right: 250px;
-}
-
-.pt-100 {
-    padding-top: 100px;
-}
-
-.wt-30 {
-    width: 35%;
-}
-
-.wt-200 {
-    width: 200px;
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 @font-face {
@@ -49,41 +25,56 @@ a { color: inherit; }
     src: url("../../assets/font/Anton-Regular.ttf");
 }
 
-.poppins-bold {
+/*=============================================fundos*/
+
+.segunda-parte {
+    background-color: #E06309;
+}
+
+.terceira-parte {
+    background-color: #000000;
+}
+
+/*===============================================textos*/
+.poppins-bold1 {
     font-family: Poppins-Bold;
-    letter-spacing: 3.5px;
+    letter-spacing: 3.1px;
+    text-align: left;
+    margin-left: 120px;
 }
 
-.poppins-regular {
+.poppins-regular1 {
     font-family: Poppins-Regular;
+    text-align: left;
+    margin-left: 120px;
+    margin-right: 90px;
     text-align: justify;
-}
-
-.anton {
-    font-family: Anton-Regular;
-    letter-spacing: 3px;
-}
-
-.bg-preto {
-    background-color: black;
-}
-
-.text-black {
-    color: black;
-}
-
-.text-amarelo {
-    color: #F2A410
-}
-
-.responsive-image {
-    left: 100px;
-    top: 10px;
 }
 
 .row {
     margin-left: 0;
     margin-right: 0;
+}
+
+h1 {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 7.2vh;
+    color: #111111;
+}
+
+h2 {
+    margin-top: 20vh;
+    bottom: 44.3%;
+    font-style: normal;
+    font-weight: bold;
+    width: auto;
+    font-size: 5vw;
+    text-align: center;
+    color: #E06309;
+    text-shadow: 0vh 0.64vh 0.64vh rgba(0, 0, 0, 0.25);
 }
 
 h3 {
@@ -119,44 +110,71 @@ p {
 }
 
 .text-3 {
-    
     font-style: normal;
     font-size: 15px;
     line-height: 30px;
-    text-align:center;
+    text-align: justify;
     color: #F4EFE9;
 }
 
-
-/*configurações de margem de texto*/
-
-.init {
-    position: relative;
-    width: 545px;
-    height: 269px;
-    left: 50px;
+.titulocard {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    color: #111111;
 }
+
+li {
+    font-style: normal;
+    font-size: 15px;
+    text-align: center;
+    color: #111111;
+}
+
+.saiba {
+    margin-left: 140px;
+    font-style: italic;
+    font-size: 15px;
+    text-align: center;
+    color: #111111;
+}
+/*=================================================*/
+.imgBox img {
+    width: 30rem;
+    height: 30rem;
+    object-fit: cover;
+    resize: both;
+    margin-right: 160px;
+}
+
+/*=======================================================CARDS*/
 .ft-card {
     border-radius: 50%;
 }
+
 .card {
-    width: 450px;
-    height: 250px;
+    width: 75vh;
+    height: 40vh;
     background-color: #fff;
     background: linear-gradient(#f8f8f8, #fff);
-    box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
-    border-radius: 6px;
+    box-shadow: 0  1.28vh 2.56vh -1.28vh rgba(0, 0, 0, 0.4);
+    border-radius: 0.96vh;
     overflow: hidden;
     position: relative;
     margin: 1.5rem;
 }
+
 .card h1 {
     text-align: center;
 }
 
 .card .additional {
     position: absolute;
-    width: 150px;
+    width: 25.44vh;
     height: 100%;
     background: linear-gradient(#E06309, #E06309);
     transition: width 0.4s;
@@ -170,23 +188,24 @@ p {
 
 .card:hover .additional {
     width: 100%;
-    border-radius: 0 5px 5px 0;
+    border-radius: 0 0.8vh 0.8vh 0;
 }
 
 .card .additional .user-card {
-    width: 150px;
+    width: 24vh;
     height: 100%;
     position: relative;
     float: left;
 }
+
 .card .additional .user-card::after {
     content: "";
     display: block;
     position: absolute;
     top: 10%;
-    right: -2px;
+    right: -0.32vh;
     height: 80%;
-    border-left: 2px solid rgba(0, 0, 0, 0.025);
+    border-left: 0.32vh solid rgba(0, 0, 0, 0.025);
 }
 
 .card .additional .user-card, .card .additional .user-card .points {
@@ -197,9 +216,10 @@ p {
     font-weight: bold;
     background: rgba(0, 0, 0, 0.15);
     padding: 0.125rem 0.75rem;
-    border-radius: 100px;
+    border-radius: 16vhx;
     white-space: nowrap;
 }
+
 .card .additional .user-card .points {
     top: 85%;
 }
@@ -209,10 +229,10 @@ p {
 }
 
 .card .additional .more-info {
-    width: 300px;
+    width: 48vh;
     float: left;
     position: absolute;
-    left: 150px;
+    left: 24vh;
     height: 100%;
 }
 
@@ -224,6 +244,7 @@ p {
 .card.green .additional .more-info h1 {
     color: #fff;
 }
+
 .card .additional .coords {
     margin: 0 1rem;
     color: #fff;
@@ -248,6 +269,7 @@ p {
     top: auto;
     color: #fff;
 }
+
 .card.green .additional .stats {
     color: #fff;
 }
@@ -272,17 +294,20 @@ p {
     font-weight: bold;
     line-height: 1.5rem;
 }
+
 .card .additional .stats div.value.infinity {
     font-size: 2.5rem;
 }
 
 .card .general {
-   margin-left: 60px;
-  
+    margin-left: 9.6vh;
+
 }
+
 ul {
     list-style: none;
-   }
+}
+
 .card .general .more {
     position: absolute;
     bottom: 1rem;
@@ -290,37 +315,40 @@ ul {
     font-size: 0.9em;
     margin-left: 30pt;
 }
+
 .position {
-    margin: 100px;
+    margin-top: 16vh;
+    margin-left: 16vh;
+    margin-bottom: 0vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .card-1 {
-    position: absolute;
-    left: 150px;
-    top: 1550px;
+    position: relative;
+    margin-top: 15vh;
 }
 
 .card-2 {
-    position: absolute;
-    left: 150px;
-    top: 1850px;
+    position: relative;
 }
 
 .card-3 {
-    position: absolute;
-    left: 711.91px;
-    top: 1500px;
+    position: relative;
+    margin-top: 10vh;
 }
 
 .card-4 {
-    position: absolute;
-    left: 711.91px;
-    top: 1800px;
+    position: relative;
 }
 
 .card-5 {
-    position: absolute;
-    left: 711.91px;
-    top: 2100px;
+    position: relative;
+    margin-left: 87vh;
+    margin-bottom: 15vh;
 }
 
+.fa{
+    color: #000000;
+}

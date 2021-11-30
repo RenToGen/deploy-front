@@ -15,13 +15,14 @@
 
   <nav class="navbar navbar-expand-lg navbar-light bg-nb fixed-top ">
     <!-- logado -->
+    <a *ngIf='logado()' class="logologado" routerLink="/home">
+      <img class="img-fluid" src="https://i.imgur.com/kR7eZXZ.png" width="30%" alt="logo da empresa rento"></a>
 
-    <a *ngIf='logado()' class="navbar-brand" href="#"><img src="https://i.imgur.com/kR7eZXZ.png"
-      style="width:60px" id='Logo' alt=""></a>
     <!-- deslogado -->
-    <a *ngIf='deslogado()' class="navbar-brand" href="#">
-      <img class="img-fluid lg-nb " src="https://i.imgur.com/kR7eZXZ.png" width="77%" height="auto" alt="">
+    <a *ngIf='deslogado()' routerLink="/home">
+      <img class="img-fluid" src="https://i.imgur.com/kR7eZXZ.png" width="30%" alt="logo da empresa rento">
     </a>
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
       aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
       <span class="navbar-toggler-icon"></span>
@@ -36,7 +37,7 @@
           <a class="nav-item nav-link mr-5" routerLink='/cursos'>CURSOS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-item nav-link mr-5" routerLink='/servicos'>SERVIÇOS</a>
+          <a class="nav-item nav-link mr-5" routerLink='/servicos' *ngIf='logado()' >SERVIÇOS</a>
         </li>
         <li class="nav-item">
           <a class="nav-item nav-link mr-5" routerLink='/sobre'>SOBRE NÓS</a>
@@ -47,31 +48,32 @@
       </ul>
 
       <div class="form-inline my-2 my-lg-1 ">
-        <button type="button" *ngIf='deslogado()' class="btn ml-3 bt-nv mr-4 " data-toggle="modal"
-          data-target="#modalLogin"> ENTRAR
-        </button>
-        <button type="button" *ngIf='deslogado()' class="btn  bt-nv azeebee" data-toggle="modal"
-          data-target="#modalCadastro">CADASTRE-SE</button>
+        <button type="button" *ngIf='deslogado()' id="testbutton2" data-toggle="modal"
+          data-target="#modalLogin"></button>
+        <button type="button" *ngIf='deslogado()' id="testbutton" data-toggle="modal"
+          data-target="#modalCadastro"></button>
       </div>
 
-      <div class="form-inline my-2 my-lg-0 ">
+      <div class="form-inline my-2 my-lg-0">
 
-        <ul *ngIf='logado()' class="navbar-nav d-flex align-items-center">
+
+        <ul *ngIf='logado()' class="navbar-nav d-flex">
         
-          <div class="nav-item active">
-            <img src="{{foto}}" alt="Imagem do User" width="70px" height="70px" class="img-fluid rounded-circle">
+          <div class="nav-item imagem-user mr-4 active">
+            <img src="{{foto}}" alt="Imagem do User"  class="img-fluid1 imagem-user rounded-circle" width="10%">
           
           </div>
-          <div class="nav-item">
+          <div class="nav-item pr-5" >
 
-            <p class="m-0 font-weight-bold text-white fs-16"> {{nome}} </p>
-            <li class="nav-item dropdown">
+            <p class="m-0 font-weight-bold text-white fs-14"> {{nome}} </p>
+            <li class="nav-item  dropleft">
+              
+              <a class="nav-link dropdown-toggle fs-13 my-2 " href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
 
-              <a class="nav-link dropdown-toggle fs-13 my-2" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                 aria-expanded="false">
                 Menu
               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <div class="dropdown-menu dropleft" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item mt-3" routerLink="/admin">Admin</a>
                 <a class="dropdown-item my-3" href="">Mensagens</a>
 
